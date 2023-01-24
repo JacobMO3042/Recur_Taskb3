@@ -35,20 +35,25 @@ function branch(len){ //length of pranch to draw
             fill(r,g,b, 100);
             let size = 15 + random(15);
             noStroke();
+            push()
+            rotate(random(-20, 90))
+            ellipse(0,-size * 1.5 ,size,size * 3)
+            pop()
             // triangle(-size/2, 0, size/2, 0, 0, -size );
-            beginShape();
-            let radius = random(10, 30);
-            for(let i = 45; i< 135; i++){
-                let x = radius * cos(i);
-                let y = radius + sin(i);
-                vertex(x, y);
-            }
-            for(let i = 135; i > 45; i--){
-                let x = radius * cos(i);
-                let y = radius * sin(-i);
-                vertex(x, y);
-            }
-            endShape(CLOSE)
+            // beginShape();
+            // let radius = random(10, 30);
+            // for(let i = 45; i< 135; i++){
+            //     let x = radius * cos(i);
+            //     let y = radius + sin(i);
+            //     vertex(x, y);
+            // }
+            // for(let i = 135; i > 45; i--){
+            //     let x = radius * cos(i);
+            //     let y = radius * sin(-i);
+            //     vertex(x, y);
+            // }
+            // endShape(CLOSE)
+
         }else{
                     //branch 1
         push();
